@@ -112,7 +112,7 @@
       <v-col
         v-for="n in cols"
         :key="n"
-        cols="2"
+        cols="4"
         sm="2"
       >
         <v-card  elevation="3"
@@ -145,17 +145,17 @@
 
 <v-divider vertical></v-divider>
 
-<div class="p-4">
+<div class="px-4">
   <label for="">resolved</label>
   <h4 class="mt-2"><strong>0</strong></h4>
-  <label for="">Average first response time</label>
+  <label  for="">Average first response time</label>
   <h4 class="mt-2"><strong>0 m</strong></h4>
   <label for="">resolution within SLA</label>
   <h4 class="mt-2"><strong>0 %</strong></h4>
 </div>
 
 <v-divider vertical></v-divider>
-<div class="p-4">
+<div class="px-4">
 <label for="">reseived</label>
   <h4 class="mt-2"><strong>8</strong></h4>
   <label for="">Average-response time</label>
@@ -183,13 +183,13 @@
 
 
 
-    <div class="mx-4 d-flex justify-space-between"><label for="">Unassigned</label> <label for="">8</label></div> 
+    <div class="mx-4 mt-3 d-flex justify-space-between"><label for="">Unassigned</label> <label for="">8</label></div> 
     <v-divider></v-divider>
 
-    <div class="mx-4 d-flex justify-space-between"><label for="">Customer support </label> <label for="">2</label></div> 
+    <div class="mx-4 mt-3 d-flex justify-space-between"><label for="">Customer support </label> <label for="">2</label></div> 
     <v-divider></v-divider>
 
-    <div class="mx-4 d-flex justify-space-between"><label for="">Billing </label> <label for="">1</label></div> 
+    <div class="mx-4 mt-3 d-flex justify-space-between"><label for="">Billing </label> <label for="">1</label></div> 
    
      
 

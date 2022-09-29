@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-app-bar class=" mt-2  mr-8" style="background-color: white !important" app   absolute >
+    <v-app-bar class=" appbar mt-2  mr-8"  app   absolute >
       <app-bar  ></app-bar>
      
     </v-app-bar>
-    <v-main style="background-color: #F5F5F5;" class="pl-12">
+    <v-main  class="pl-12">
       <!-- Sizes your content based upon application components -->
       <div
         class="app-content-container boxed-container pa-6"
@@ -27,8 +27,7 @@
     >
       <sidebar></sidebar>
     </v-navigation-drawer>
-    <!-- :isDrawerOpen.sync="isDrawerOpen" -->
-    <!--  </v-navigation-drawer> -->
+
    
 
     
@@ -60,6 +59,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .v-main ::v-deep{
+    background-color: #F5F5F5;
+  }
+  .appbar{
+    background-color: white !important
+  }
 .v-app-bar ::v-deep {
  
   .v-toolbar__content {
@@ -75,7 +81,7 @@ export default {
 
 header{
 
-left:8% !important;
+left:7% !important;
 
 }
 

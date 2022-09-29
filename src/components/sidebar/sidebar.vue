@@ -2,7 +2,7 @@
   
  
    
-    <v-list   dense  style="margin-top:100%;"  >
+    <v-list    dense  class="mt-16"  >
 
          <v-list-item-group  color="#888888" active-class="active"   v-model="selected"   mandatory>
       <v-list-item   link   v-for="(item, i) in items" 
