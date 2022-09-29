@@ -86,8 +86,8 @@
         bottom
         color="success"
         overlap
-        offset-x="12"
-        offset-y="12"
+        offset-x="10"
+        offset-y="23"
         class="ms-4"
         dot
       >
