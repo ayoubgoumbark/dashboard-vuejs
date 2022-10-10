@@ -1,22 +1,23 @@
-<template>
+<template >
   
  
-   
-    <v-list    dense  class="mt-16"  >
+   <div class="sidebar_content">
+    <v-list    dense   >
 
-         <v-list-item-group  color="#888888" active-class="active"   v-model="selected"   mandatory>
-      <v-list-item   link   v-for="(item, i) in items" 
+         <v-list-item-group class="sidebar-item"  active-class="sidebar-item-active"   v-model="selected"   >
+      <v-list-item      v-for="(item, i) in items" 
           :key="i"  >
-        <v-list-item-icon  >
-          <v-icon size="17">{{item}} </v-icon>
-        </v-list-item-icon>
+       
+          <v-icon size="17" class="sidebar-item-icon" >{{item}} </v-icon>
+       
+       
        
       </v-list-item>
       </v-list-item-group>
 
  
     </v-list>
-  
+  </div>
 </template>
 
 <script>
@@ -41,9 +42,28 @@ export default {
 
 <style lang="scss" scoped>
 
-.active{
-   background-color: #F7F7F7;
-   color:#888888;
-    
+
+
+.sidebar_content{ display: flex !important; 
+  align-items: center !important;
+
+  height: 100vh;
+}
+
+.sidebar-item .v-icon{
+
+color:#888888 !important;
+
+
+
+}
+.sidebar-item-active .v-icon{
+ 
+ color:black !important;
+  
+}
+
+.sidebar{
+background-color: white !important;
 }
 </style>
