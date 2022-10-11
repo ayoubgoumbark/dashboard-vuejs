@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 
   .v-main ::v-deep{
-    background-color: #F5F5F5;
+    background-color: #f3e5cf;
   }
  
 
