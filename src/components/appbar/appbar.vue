@@ -8,29 +8,8 @@
   >
     <div class=" d-flex justify-start">
       <v-btn-toggle dist >
-        <v-list-item link>
-          
-            <v-icon size="18"> fa-comment </v-icon>
-         
-        </v-list-item>
-        <v-list-item link>
-         
-            <v-icon size="18"> fa-envelope </v-icon>
-         
-        </v-list-item>
-        <v-list-item link>
-         
-            <v-icon size="18"> fa-calendar </v-icon>
-         
-        </v-list-item>
-        <v-list-item link>
-         
-            <v-icon size="18" color="yellow"> fa-star </v-icon>
-         
-        </v-list-item>
-
-        <v-divider class="mx-4" vertical></v-divider>
-
+        <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+  
         <v-list-item link>
          
             <v-icon size="18"> fa-search </v-icon>
@@ -40,12 +19,12 @@
     </div>
 
     <div class="d-flex justify-end">
-      <v-list dense style="background: transparent !important">
+      
+        <v-btn-toggle dist  style="background: transparent !important">
         <!-- Chat -->
         <v-list-item link>
           <v-list-item-icon class="me-2">
-            <!--       @click.prevent="isOpen ? close() : openAndFocus()" -->
-            <!-- v-if="showLauncher" -->
+          
 
             <v-img
               src="../../assets/etats-unis.png"
@@ -59,13 +38,15 @@
             <v-list-item-title>English</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-      </v-list>
+      
 
       <!--    <theme-switcher></theme-switcher> -->
+    <v-list-item  link>
       <v-badge
+      
         class="d-flex align-center"
         top
-        :color="allNotificationscount != 0 ? 'error' : null" 
+        :color="'error' " 
         overlap
         :content="allNotificationscount"
       >
@@ -75,7 +56,11 @@
           </v-icon>
         </v-avatar>
       </v-badge>
+    </v-list-item>
+  </v-btn-toggle>
 
+   <v-list-item link>
+  
       <div
         class="d-inline-flex flex-column justify-center ms-3"
         style="vertical-align: middle"
@@ -97,8 +82,13 @@
           <v-img :src="require('../../assets/images/avatars/1.png')"></v-img>
         </v-avatar>
       </v-badge>
-    </div>
+    </v-list-item>
+
+
+
   </div>
+</div>
+
 </v-app-bar></template>
 
 <script>
@@ -110,7 +100,7 @@ export default {
   data() {
     return {
       allNotificationscount: 4,
-      isDrawerOpen: false,
+      drawer: true,
       icons: {
         mdiMagnify,
         mdiBellOutline,

@@ -17,7 +17,7 @@
      mini-variant
       class="sidebar"
       fixed
-
+      v-model="drawer"
     >
       <sidebar/>
     </v-navigation-drawer>
@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      
+      drawer:true
     };
   },
   

@@ -39,6 +39,7 @@
       <v-list-item-group
       active-class="isactivenav"
         v-model="selectedItem">
+        
         <v-list-item
      
           v-for="item in navigation"
@@ -97,29 +98,37 @@
 
       <v-col
       class="pl-4"
-      cols="10"
+      cols="12"
       sm="10"
     >
 
 
 
-    <v-row no-gutters>
+    <v-row    no-gutters>
       <v-col
         v-for="n in cols"
         :key="n"
-        cols="4"
-        sm="2"
+       cols="6"
+       sm="3"
+        
       >
-        <v-card  elevation="3"
+      <v-hover
+        v-slot="{ hover }"
+        open-delay="0"
+      >
+        <v-card  :elevation="hover ? 16 : 2"
+        
+          :class="{ 'on-hover': hover }"
          outlined
           class="pa-2"
           :style="{'background-color':n.color}"
-          tile
+          
         >
         <v-card-title>  {{n.count}}</v-card-title>
         <v-card-text>  {{n.title}}</v-card-text>
        
         </v-card>
+        </v-hover>
       </v-col>
 
     </v-row>
@@ -258,22 +267,12 @@ export default {
       {
         title:'Open',count:656,color:'rgb(251 255 184)'
       }
-      ,
-      {
-        title:'On hold',count:786,color:'#ffb8b8'
-      }
-      ,
-      {
-        title:'Unassigned',count:766 ,color:'#dcf5c4'
-      }
+     
     
     ],
       items: [
        
-        {
-          text: 'Ticket',
-         
-        },
+       
       
         {
           text: 'Dashboard',
