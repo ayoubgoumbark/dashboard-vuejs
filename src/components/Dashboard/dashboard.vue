@@ -1,17 +1,7 @@
 <template>
   
-    <v-card   class=" px-6 dashboard-main" flat >
-<div style="background:transparent;"  class=" d-inline-flex">
-      <v-icon >fa-home</v-icon>
-      <v-icon class="ml-4">mdi-chevron-right</v-icon>
-      <v-breadcrumbs :items="items">
-        
-      <template v-slot:divider>
-        
-        <v-icon>mdi-chevron-right</v-icon>
-      </template>
-    </v-breadcrumbs>
-  </div>
+    <v-card   class="  mt-8 dashboard-main" flat >
+
 
 
 
@@ -104,23 +94,23 @@
 
 
 
-    <v-row    no-gutters>
+    <v-row  justify-sm="space-between"  no-gutters>
       <v-col
         v-for="n in cols"
         :key="n"
        cols="6"
        sm="3"
-        
+      
       >
       <v-hover
         v-slot="{ hover }"
         open-delay="0"
       >
-        <v-card  :elevation="hover ? 16 : 2"
+        <v-card   :elevation="hover ? 16 : 2"
         
-          :class="{ 'on-hover': hover }"
+          :class="{ 'on-hover hovercard': hover }"
          outlined
-          class="pa-2"
+          class="pa-2 cardsP"
           :style="{'background-color':n.color}"
           
         >
@@ -322,5 +312,27 @@ h4{
 .dashboard-main{
 
   background-color: transparent !important;
+}
+
+
+.hovercard{
+transform:translateY(-10px);
+
+}
+
+.cardsP{
+transition:all 0.5s ease-in-out;
+
+  cursor:pointer;
+}
+
+
+@media (min-width: 600px)
+{
+.col-sm-3{
+
+  max-width:23% !important;
+}
+
 }
 </style>

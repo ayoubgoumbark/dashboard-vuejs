@@ -1,8 +1,8 @@
 <template>
  
-<v-app-bar fixed class="appbar " app >
+<div    class="appbar "  >
   <!--  @click="isDrawerOpen = !isDrawerOpen" -->
-  <div
+  <div 
     class=" d-flex justify-space-between align-center"
     style="width: 100% !important"
   >
@@ -87,9 +87,9 @@
 
 
   </div>
-</div>
+</div> 
 
-</v-app-bar></template>
+</div></template>
 
 <script>
 import { mdiMagnify, mdiBellOutline } from "@mdi/js";
@@ -112,7 +112,8 @@ export default {
 
 <style lang="scss" scoped>
 
-.appbar {
+.appbar { 
+  
   background-color: white !important;
 }
 

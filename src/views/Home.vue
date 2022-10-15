@@ -1,22 +1,36 @@
 <template>
   <v-app>
+
+
+
+<v-container><app-bar  ></app-bar>
    
-      <app-bar  ></app-bar>
+    
      
   
-    <v-main  class="pl-12">
+    <v-main  >
       <!-- Sizes your content based upon application components -->
       
        <dashboard></dashboard>
        
      
     </v-main>
+</v-container>
+
+
+    
+
+
+
+
+
+
     <!--  <v-navigation-drawer app>-->
     <v-navigation-drawer
       app
      mini-variant
       class="sidebar"
-      fixed
+      fixed 
       v-model="drawer"
     >
       <sidebar/>
@@ -55,7 +69,8 @@ export default {
 <style lang="scss" scoped>
 
   .v-main ::v-deep{
-    background-color: #f3e5cf;
+    background-color: #F7F7F7;
+    padding:0 !important;
   }
  
 
