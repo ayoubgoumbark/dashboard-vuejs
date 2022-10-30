@@ -1,44 +1,22 @@
 <template>
   <v-app>
-
-
-
-<v-container><app-bar  ></app-bar>
-   
-    
-     
-  
-    <v-main  >
-      <!-- Sizes your content based upon application components -->
-      
-       <dashboard></dashboard>
-       
-     
-    </v-main>
-</v-container>
-
-
-    
-
-
-
-
-
-
     <!--  <v-navigation-drawer app>-->
     <v-navigation-drawer
+      expand-on-hover
       app
-     mini-variant
+      mini-variant
       class="sidebar"
-      fixed 
+      fixed
       v-model="drawer"
     >
-      <sidebar/>
+      <sidebar />
     </v-navigation-drawer>
 
-   
-
-    
+    <v-main>
+      <!-- Sizes your content based upon application components -->
+      <app-bar></app-bar>
+      <dashboard></dashboard>
+    </v-main>
   </v-app>
 </template>
 
@@ -53,28 +31,22 @@ export default {
 
   components: {
     "app-bar": appbar,
-   "dashboard":dashboard,
+    dashboard: dashboard,
     sidebar,
   },
   data() {
     return {
-      drawer:true
+      drawer: true,
     };
   },
-  
- 
 };
 </script>
 
 <style lang="scss" scoped>
-
-  .v-main ::v-deep{
-    background-color: #F7F7F7;
-    padding:0 !important;
-  }
- 
-
-
-
- 
+#app {
+  background: #f5e5c4 !important;
+}
+.v-main ::v-deep {
+  margin: 2% 4% 0 4% !important;
+}
 </style>
